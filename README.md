@@ -7,6 +7,7 @@
 2. Install Visual Studio 2019. You may already have 2015 or 2017 but it will be easiest if we
    are all on the same version.
 3. Find a place with you want Project Armchair to live. Clone this repo by doing
+   
    `git clone https://github.com/dwdineen/ProjectArmchair.git`.
 4. Open up Visual Studio.
 5. Click "Open a local folder" and navigate to ProjectArmchair folder.
