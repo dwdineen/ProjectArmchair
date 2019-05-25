@@ -1,6 +1,10 @@
+#include <armchair/model.hpp>
+#include <armchair/sim_object/sim_object.hpp>
+
 #include <iostream>
 
 int main()
 {
-	std::cout << "Hello\n";
+	arm::Model model;
+	model.Update();
 }
