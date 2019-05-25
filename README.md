@@ -15,6 +15,11 @@
    CMakeLists.txt on the side and click the green button again. It should run
    and produce a simple text output.
 
+### Setup SFML with Visual Studio 19
+
+1. Download Visual C++ 15 (2017) 64 bit from https://www.sfml-dev.org/download/sfml/2.5.1/.
+2. Extract the contents.
+3. Copy SFML-2.5.1 folder into the ProjectArmchair root directory.
 
 ## Naming conventions
 
