@@ -18,8 +18,9 @@
 ### Setup SFML with Visual Studio 19
 
 1. Download Visual C++ 15 (2017) 64 bit from https://www.sfml-dev.org/download/sfml/2.5.1/.
-2. Extract the contents.
-3. Copy SFML-2.5.1 folder into the ProjectArmchair root directory.
+2. Right click on zip file and click extract all.
+3. Create an ext folder in Project Armchair root directory.
+4. Copy SFML-2.5.1-windows-vc15-64-bit folder into the ext folder.
 
 ## Naming conventions
 
