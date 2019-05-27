@@ -4,6 +4,7 @@
 
 #include <engine/events/mouse_events.hpp>
 #include <engine/events/keyboard_events.hpp>
+#include <engine/events/window_events.hpp>
 
 namespace arm
 {
@@ -60,6 +61,13 @@ void Window::OnUpdate() {
         {
             event_cb_fn_(std::make_shared<KeyReleasedEvent>(SfmlKeyToArm(evnt)));
         }
+        
+        //Window Events
+        if (evnt.type == sf::Event::Resized)
+        {
+            event_cb_fn_(std::make_shared<WindowResizeEvent>(evnt.size.width, evnt.size.height));
+        }
+
     }
 }
 

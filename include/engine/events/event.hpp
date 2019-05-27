@@ -17,6 +17,7 @@ public:
 	virtual std::string ToString() const = 0;
 };
 
+
 enum class MouseButton
 {
 	LEFT,
