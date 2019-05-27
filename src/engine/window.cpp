@@ -18,49 +18,49 @@ namespace arm
  * This seperation of concerns makes expanding the project
  * easier, and results in less "spaghetti code". */
 void Window::OnUpdate() {
-	sf::Event evnt;
-	while (sfml_window_.pollEvent(evnt))
-	{
-		// Mouse Pressed Event
-		if (evnt.type == sf::Event::MouseButtonPressed)
-		{
-			arm::MouseButton btn;
-			if (evnt.mouseButton.button == sf::Mouse::Left)
-				btn = MouseButton::LEFT;
-			if (evnt.mouseButton.button == sf::Mouse::Middle)
-				btn = MouseButton::MIDDLE;
-			if (evnt.mouseButton.button == sf::Mouse::Right)
-				btn = MouseButton::RIGHT;
-
-			event_cb_fn_(std::make_shared<MouseClickedEvent>
-				(evnt.mouseButton.x, evnt.mouseButton.y, btn));
-		}
-
-		// Mouse Released Event
-		if (evnt.type == sf::Event::MouseButtonReleased)
-		{
-			arm::MouseButton btn;
+    sf::Event evnt;
+    while (sfml_window_.pollEvent(evnt))
+    {
+        // Mouse Pressed Event
+        if (evnt.type == sf::Event::MouseButtonPressed)
+        {
+            arm::MouseButton btn;
             if (evnt.mouseButton.button == sf::Mouse::Left)
                 btn = MouseButton::LEFT;
-			if (evnt.mouseButton.button == sf::Mouse::Middle)
-				btn = MouseButton::MIDDLE;
+            if (evnt.mouseButton.button == sf::Mouse::Middle)
+                btn = MouseButton::MIDDLE;
             if (evnt.mouseButton.button == sf::Mouse::Right)
                 btn = MouseButton::RIGHT;
 
-			event_cb_fn_(std::make_shared<MouseReleasedEvent>
-				(evnt.mouseButton.x, evnt.mouseButton.y, btn));
-		}
+            event_cb_fn_(std::make_shared<MouseClickedEvent>
+                (evnt.mouseButton.x, evnt.mouseButton.y, btn));
+        }
 
-		if (evnt.type == sf::Event::KeyPressed)
-		{
-			event_cb_fn_(std::make_shared<KeyPressedEvent>(SfmlKeyToArm(evnt)));
-		}
+        // Mouse Released Event
+        if (evnt.type == sf::Event::MouseButtonReleased)
+        {
+            arm::MouseButton btn;
+            if (evnt.mouseButton.button == sf::Mouse::Left)
+                btn = MouseButton::LEFT;
+            if (evnt.mouseButton.button == sf::Mouse::Middle)
+                btn = MouseButton::MIDDLE;
+            if (evnt.mouseButton.button == sf::Mouse::Right)
+                btn = MouseButton::RIGHT;
+
+            event_cb_fn_(std::make_shared<MouseReleasedEvent>
+                (evnt.mouseButton.x, evnt.mouseButton.y, btn));
+        }
+
+        if (evnt.type == sf::Event::KeyPressed)
+        {
+            event_cb_fn_(std::make_shared<KeyPressedEvent>(SfmlKeyToArm(evnt)));
+        }
 
         if (evnt.type == sf::Event::KeyReleased)
         {
             event_cb_fn_(std::make_shared<KeyReleasedEvent>(SfmlKeyToArm(evnt)));
         }
-	}
+    }
 }
 
 }
