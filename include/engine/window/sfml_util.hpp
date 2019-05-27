@@ -32,8 +32,8 @@ inline arm::Keyboard SfmlKeyToArm(sf::Event key_event)
         if (key_event.key.shift) return arm::Keyboard::H;
         else return arm::Keyboard::h; 
     case sf::Keyboard::I:
-            if (key_event.key.shift) return arm::Keyboard::I;
-            else return arm::Keyboard::i;
+        if (key_event.key.shift) return arm::Keyboard::I;
+        else return arm::Keyboard::i;
     case sf::Keyboard::J:
         if (key_event.key.shift) return arm::Keyboard::J;
         else return arm::Keyboard::j;
