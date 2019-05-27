@@ -4,6 +4,7 @@
 
 #include <engine/events/mouse_events.hpp>
 #include <engine/events/keyboard_events.hpp>
+#include <engine/events/window_events.hpp>
 
 namespace arm
 {
@@ -59,6 +60,12 @@ void Window::OnUpdate() {
         if (evnt.type == sf::Event::KeyReleased)
         {
             event_cb_fn_(std::make_shared<KeyReleasedEvent>(SfmlKeyToArm(evnt)));
+        }
+
+        // Window Closed Event
+
+        if (evnt.type == sf::Event::Closed) {
+            event_cb_fn_(std::make_shared<WindowClosedEvent>());
         }
     }
 }
