@@ -29,14 +29,36 @@ enum class MouseButton
 enum class Keyboard
 {
     UNKNOWN = -1,
+    
+    BACKSPACE = 8, TAB_KEY, ENTER_KEY,
+
+    ESCAPE = 27,
+
+    SPACE = 32, EXCLAMATION_MARK, QUOTEMARKS, POUND_SYMBOL, DOLLAR_SIGN,
+    PERCENT_SYMBOL, AMPERSAND, APOSTROPHE, OPEN_BRACE, CLOSE_BRACE,
+    ASTERISK, PLUS_SIGN, DASH, PERIOD, FORWARD_SLASH,
+
+    COMMA = 44,
+
+    ZERO = 48, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE,
+
+    LESS_THAN = 60, EQUAL_SIGN, GREATER_THAN, QUESTION_MARK, AT_SYMBOL,
 
     A = 65, B, C, D, E, F, G, H, I, J,
     K, L, M, N, O, P, Q, R, S, T,
     U, V, W, X, Y, Z,
 
+    BACKSLASH = 92,
+    CARAT = 94, UNDERSCORE, GRAVE,
+
     a = 97, b, c, d, e, f, g, h, i, j,
     k, l, m, n, o, p, q, r, s, t,
-    u, v, w, x, y, z
+    u, v, w, x, y, z,
+
+    TILDE = 126,
+
+    LEFT_ARROW = 300, RIGHT_ARROW, UP_ARROW, DOWN_ARROW,
+
 
 };
 
