@@ -7,6 +7,7 @@ inline arm::Keyboard SfmlKeyToArm(sf::Event key_event)
 {
 	switch (key_event.key.code)
 	{
+    //Letter Keys
 	case sf::Keyboard::A:
 		if (key_event.key.shift) return arm::Keyboard::A;
 		else return arm::Keyboard::a;
@@ -85,6 +86,81 @@ inline arm::Keyboard SfmlKeyToArm(sf::Event key_event)
     case sf::Keyboard::Z:
         if (key_event.key.shift) return arm::Keyboard::Z;
         else return arm::Keyboard::z;
+
+    //Number Keys
+    case sf::Keyboard::Num0:
+        if (key_event.key.shift) return arm::Keyboard::CLOSE_BRACE;
+        else return arm::Keyboard::ZERO;
+    case sf::Keyboard::Num1:
+        if (key_event.key.shift) return arm::Keyboard::EXCLAMATION_MARK;
+        else return arm::Keyboard::ONE;
+    case sf::Keyboard::Num2:
+        if (key_event.key.shift) return arm::Keyboard::AT_SYMBOL;
+        else return arm::Keyboard::TWO;
+    case sf::Keyboard::Num3:
+        if (key_event.key.shift) return arm::Keyboard::POUND_SYMBOL;
+        else return arm::Keyboard::THREE;
+    case sf::Keyboard::Num4:
+        if (key_event.key.shift) return arm::Keyboard::DOLLAR_SIGN;
+        else return arm::Keyboard::FOUR;
+    case sf::Keyboard::Num5:
+        if (key_event.key.shift) return arm::Keyboard::PERCENT_SYMBOL;
+        else return arm::Keyboard::FIVE;
+    case sf::Keyboard::Num6:
+        if (key_event.key.shift) return arm::Keyboard::CARAT;
+        else return arm::Keyboard::SIX;
+    case sf::Keyboard::Num7:
+        if (key_event.key.shift) return arm::Keyboard::AMPERSAND;
+        else return arm::Keyboard::SEVEN;
+    case sf::Keyboard::Num8:
+        if (key_event.key.shift) return arm::Keyboard::ASTERISK;
+        else return arm::Keyboard::EIGHT;
+    case sf::Keyboard::Num9:
+        if (key_event.key.shift) return arm::Keyboard::OPEN_BRACE;
+        else return arm::Keyboard::NINE;
+
+
+
+    //Utility Keys
+    case sf::Keyboard::Enter:
+        return arm::Keyboard::ENTER_KEY;
+    case sf::Keyboard::Backspace:
+        return arm::Keyboard::BACKSPACE;
+    case sf::Keyboard::Tab:
+        return arm::Keyboard::TAB_KEY;
+    case sf::Keyboard::Escape:
+        return arm::Keyboard::ESCAPE;
+    case sf::Keyboard::Space:
+        return arm::Keyboard::SPACE;
+    case sf::Keyboard::Tilde:
+        if (key_event.key.shift) return arm::Keyboard::TILDE;
+        else return arm::Keyboard::GRAVE;
+    case sf::Keyboard::Dash:
+        if (key_event.key.shift) return arm::Keyboard::UNDERSCORE;
+        else return arm::Keyboard::DASH;
+    case sf::Keyboard::Equal:
+        if (key_event.key.shift) return arm::Keyboard::PLUS_SIGN;
+        else return arm::Keyboard::EQUAL_SIGN;
+    case sf::Keyboard::Comma:
+        if (key_event.key.shift) return arm::Keyboard::LESS_THAN;
+        else return arm::Keyboard::COMMA;
+    case sf::Keyboard::Period:
+        if (key_event.key.shift) return arm::Keyboard::GREATER_THAN;
+        else return arm::Keyboard::PERIOD;
+    case sf::Keyboard::Backslash:
+        if (key_event.key.shift) return arm::Keyboard::QUESTION_MARK;
+        else return arm::Keyboard::BACKSLASH;
+
+    //Arrow Keys
+    case sf::Keyboard::Left:
+        return arm::Keyboard::LEFT_ARROW;
+    case sf::Keyboard::Right:
+        return arm::Keyboard::RIGHT_ARROW;
+    case sf::Keyboard::Down:
+        return arm::Keyboard::DOWN_ARROW;
+    case sf::Keyboard::Up:
+        return arm::Keyboard::UP_ARROW;
+
 	default:
 		return arm::Keyboard::UNKNOWN;
 	}
