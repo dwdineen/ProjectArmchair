@@ -1,8 +1,8 @@
+#pragma once
 
 #include <engine/events/event.hpp>
+#include <engine/render_object.hpp>
 #include <SFML/Graphics.hpp>
-
-
 
 namespace arm {
 
@@ -29,6 +29,9 @@ public:
 
 	// Called once per frame, handles IO events
 	void OnUpdate();
+
+	// Draw tile
+	void DrawRenderObject(std::shared_ptr<RenderObject> obj);
 
 private:
 

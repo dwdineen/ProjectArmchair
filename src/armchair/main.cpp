@@ -2,16 +2,15 @@
 #include <engine/application.hpp>
 #include <util/logging.hpp>
 
-class ArmchairApplication : public arm::Application
-{
-public:
-	ArmchairApplication() {}
-};
+#include <armchair/layers/test_layer.hpp>
+#include <engine/layer_stack.hpp>
 
 int main()
 {
-	//ARMLOG(std::string("Hello"));
-	ARMLOG("HEY");
-	arm::Application* app = new ArmchairApplication;
+	arm::Application* app = new arm::Application;
+
+	std::shared_ptr<TestLayer> test_layer(new TestLayer);
+	app->get_layer_stack()->PushLayer(test_layer);
+
 	app->Run();
 }
