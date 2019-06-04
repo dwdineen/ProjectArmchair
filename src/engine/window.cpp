@@ -6,6 +6,8 @@
 #include <engine/events/keyboard_events.hpp>
 #include <engine/events/window_events.hpp>
 
+#include <util/logging.hpp>
+
 namespace arm
 {
 
@@ -68,6 +70,11 @@ void Window::OnUpdate() {
             event_cb_fn_(std::make_shared<WindowClosedEvent>());
         }
     }
+}
+
+void Window::DrawRenderObject(std::shared_ptr<RenderObject> obj)
+{
+	// ARMLOG("Drawing render object!");
 }
 
 }

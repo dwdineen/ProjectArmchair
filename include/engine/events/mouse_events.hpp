@@ -1,4 +1,10 @@
+#pragma once
+
+#include <util/constants.hpp>
+
 #include "event.hpp"
+
+
 namespace arm {
 
 class MouseClickedEvent : public Event

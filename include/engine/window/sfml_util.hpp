@@ -1,6 +1,7 @@
 #pragma once
 
 #include <engine/events/event.hpp>
+#include <util/constants.hpp>
 #include <SFML/Graphics.hpp>
 
 inline arm::Keyboard SfmlKeyToArm(sf::Event key_event)
